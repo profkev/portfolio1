@@ -1,0 +1,51 @@
+.slider-container {
+    position: relative;
+    /* Set a fixed height for the slider container */
+    overflow: hidden;
+    width: 100%;
+   
+  }
+  
+  .slider {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .slider-item {
+    flex: 1;
+    height: 100%;
+    position: relative;
+  }
+  
+  .slider-item img {
+    /* width: auto; Set the width of the image to be auto to adjust its size to the container */
+    max-width: 100%; /* Set a maximum width of 100% to prevent the image from overflowing */
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 0px;
+  }
+  
+  @media only screen and (min-width: 768px) { /* Apply the following styles for screen sizes above 768px */
+    .slider-container {
+      height: 200px; /* Increase the height of the slider container for larger screens */
+    }
+    
+    .slider {
+      width: 100%; /* Reduce the width of the slider for larger screens */
+      margin: 0 auto;
+    
+    }
+    
+    .slider-item {
+      height: 100%;
+    }
+  }
+  @media only screen and (min-width: 992px) {
+    .slider-container {
+      height: 500px !important;
+      /* your other styles */
+    }
+  }
+  

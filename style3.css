@@ -1,0 +1,239 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set background color and text color for the whole page */
+body {
+    background-color: #f7f7f7;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+/* Style the header and navigation */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+nav li {
+    margin: 0 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ff6600;
+}
+
+/* Slider styles */
+.slider {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+/* Slider controls */
+.slider-controls {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.control {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.control:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.control i {
+    font-size: 18px;
+}
+
+/* Other section styles */
+.section {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Project card styles */
+.project-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: calc(33.33% - 20px);
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.project-card h3 {
+    font-size: 24px;
+    margin-top: 10px;
+    color: #333;
+}
+
+.project-card p {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #777;
+}
+
+.project-card a {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #ff6600;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+/* Contact section styles */
+.contact {
+    text-align: center;
+    padding: 80px 0;
+    background-color: #f7f7f7;
+}
+
+.contact h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.contact a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.contact a img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.contact a img:hover {
+    transform: scale(1.2);
+}
+/* Styling for the About Me section */
+.about-me {
+    padding: 80px 0;
+    background-color: whitesmoke;
+    color: black;
+}
+
+.about-me h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.about-me p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Styling for paragraphs within the About Me section */
+.about-me p:first-of-type {
+    margin-top: 10px;
+}
+
+/* Add a background color to the paragraphs */
+.about-me p {
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* Apply styles to emphasize certain parts of the text */
+.about-me strong {
+    color: #ff6600;
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    .about-me {
+        padding: 60px 0;
+    }
+
+    .about-me h2 {
+        font-size: 24px;
+    }
+
+    .about-me p {
+        font-size: 14px;
+    }
+}

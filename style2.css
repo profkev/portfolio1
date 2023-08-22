@@ -1,0 +1,140 @@
+/* Reset default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set a base font size and style */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Style the header and navigation */
+header {
+    background-color: #333;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #f39c12;
+}
+
+/* Style the hero section */
+.hero {
+    position: relative;
+    text-align: center;
+    padding: 10rem 0;
+    background: url('/images/Slide1.jpg') no-repeat center center / cover;
+    color: #fff;
+}
+
+/* Style the slider controls */
+.slider-controls {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.control {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+    padding: 0.5rem;
+    cursor: pointer;
+    margin: 0 0.5rem;
+    transition: background 0.3s;
+}
+
+.control:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* Style the about section */
+.about-me {
+    padding: 5rem 0;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+/* Style the portfolio section */
+.portfolio {
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.project-card {
+    background-color: #fff;
+    padding: 2rem;
+    margin: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the contact section */
+.contact {
+    text-align: center;
+    padding: 5rem 0;
+    background-color: #333;
+    color: #fff;
+}
+
+.contact a {
+    margin: 0 1rem;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .slider-controls {
+        bottom: 0.5rem;
+    }
+
+    .control {
+        margin: 0.2rem;
+    }
+
+    .hero {
+        padding: 8rem 0;
+    }
+
+    .about-me,
+    .portfolio,
+    .contact {
+        padding: 3rem 0;
+    }
+
+    .project-card {
+        margin: 1rem 0;
+    }
+}
+.slide img,
+.project-card img {
+    max-width: 50%;
+    height: auto;
+}
