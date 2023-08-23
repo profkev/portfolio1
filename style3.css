@@ -12,6 +12,8 @@ body {
     font-family: Arial, sans-serif;
 }
 
+/* ... (previous CSS code) ... */
+
 /* Style the header and navigation */
 header {
     background-color: #fff;
@@ -19,13 +21,22 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo img {
+    max-height: 70px; 
+    border-radius: 20px;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
-    padding: 10px 0;
+    align-items: center;
+    margin-right: 20px;
 }
 
 nav li {
@@ -43,70 +54,9 @@ nav a:hover {
     color: #ff6600;
 }
 
-/* Slider styles */
-.slider {
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
-}
+/* ... (rest of the CSS code) ... */
 
-.slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-}
 
-.slide.active {
-    opacity: 1;
-}
-
-/* Slider controls */
-.slider-controls {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.control {
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 10px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.control:hover {
-    background-color: rgba(255, 255, 255, 1);
-}
-
-.control i {
-    font-size: 18px;
-}
-
-/* Other section styles */
-.section {
-    padding: 80px 0;
-    background-color: #fff;
-}
-
-.section h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: #333;
-}
 
 /* Project card styles */
 .project-cards-container {
@@ -154,6 +104,17 @@ nav a:hover {
     text-decoration: none;
     border-radius: 3px;
     font-weight: bold;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .project-cards-container {
+        justify-content: flex-start;
+    }
+
+    .project-card {
+        width: calc(50% - 20px);
+    }
 }
 
 /* Contact section styles */
